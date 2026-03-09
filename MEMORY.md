@@ -2,18 +2,30 @@
 
 ## 项目：Crypto Visualizer
 - 币安量化交易程序
-- AI 自动交易（本地 Ollama）
+- AI 自动交易（本地 Ollama gpt-oss:latest）
 - 大纲：crypto-outline.md
 
 ## 当前进度
-- 已完成核心模块：交易所适配器、日志、错误处理、数据获取、指标计算、评分、选币、交易执行、AI决策、主循环
-- 依赖已安装
+- ✅ 已完成所有核心模块
+- ✅ 自动交易运行中
+- ✅ Web UI 已完成
+- ✅ 钉钉通知已配置
+- ✅ 实盘交易中
 
-## 待办
-- UI 界面
-- 数据备份模块
-- 测试运行
+## 当前持仓
+- 交易对: ETHUSDT
+- 数量: 0.0127643 ETH
+- 持仓价格: ~$2000
+- 止损: 5%
+
+## 技术栈
+- Python 3.12
+- Ollama (gpt-oss:latest)
+- 币安 API
+- Flask (Web UI)
 
 ## 重要文件
 - crypto-visualizer/main.py - 主程序入口
 - crypto-visualizer/config.py - 配置
+- crypto-visualizer/run_auto.py - 自动交易
+- crypto-visualizer/web_ui.py - Web 界面

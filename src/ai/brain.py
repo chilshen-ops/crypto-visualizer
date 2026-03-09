@@ -179,12 +179,16 @@ CONFIDENCE: 0.0-1.0 的置信度
             "action": "hold",
             "reason": "无有效决策",
             "confidence": 0,
+            "thinking": "",
             "raw_response": response
         }
         
         if not response:
             decision["reason"] = "AI 无响应"
             return decision
+        
+        # 保存完整思考过程
+        decision["thinking"] = response
         
         # 解析 ACTION
         lines = response.strip().split('\n')

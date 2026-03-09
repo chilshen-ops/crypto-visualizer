@@ -184,6 +184,14 @@ class TradingLoop:
         
         self.logger.info(f"AI 决策: {action} - {reason}")
         
+        # 保存AI决策到trader供UI显示
+        if self.trader:
+            self.trader.last_ai_action = action
+            self.trader.last_ai_reason = reason
+            self.trader.last_ai_confidence = decision.get('confidence', '')
+            self.trader.last_ai_thinking = decision.get('thinking', reason)
+            self.trader.is_running = self.running
+        
         # 验证并执行决策
         has_position = self.trader.status == TradeStatus.HOLDING
         

@@ -72,7 +72,7 @@ class Trader:
             for bal in balance.get('balances', []):
                 if bal.get('asset') == base_asset:
                     qty = float(bal.get('free', 0)) + float(bal.get('locked', 0))
-                    if qty > 0:
+                    if qty > 0.0001:  # 大于最小精度才认为有持仓
                         self.position = qty
                         self.status = TradeStatus.HOLDING
                         # 获取当前价格作为持仓参考
@@ -81,6 +81,11 @@ class Trader:
                         # 设置止损
                         self.stop_loss_price = current_price * (1 - self.stop_loss_ratio)
                         self.logger.info(f"同步持仓: {self.symbol} x {qty} @ {current_price}")
+                    else:
+                        # 空仓状态
+                        self.position = 0
+                        self.status = TradeStatus.IDLE
+                        self.logger.info(f"同步持仓: 空仓")
                     break
                     
         except Exception as e:
@@ -205,6 +210,8 @@ class Trader:
             
             # 卖出数量
             quantity = quantity or self.position
+            # 确保数量精度正确 (ETH最小0.00001)
+            quantity = round(quantity, 5)
             
             # 执行卖出
             result = self.exchange.sell_market(self.symbol, quantity)
@@ -317,7 +324,12 @@ class Trader:
             "position_time": self.position_time,
             "consecutive_loss": self.consecutive_loss,
             "daily_pnl": self.daily_pnl,
-            "can_trade": self.can_trade()
+            "can_trade": self.can_trade(),
+            "ai_action": getattr(self, 'last_ai_action', ''),
+            "ai_reason": getattr(self, 'last_ai_reason', ''),
+            "ai_confidence": getattr(self, 'last_ai_confidence', ''),
+            "ai_thinking": getattr(self, 'last_ai_thinking', ''),
+            "running": getattr(self, 'is_running', False),
         }
     
     def reset_daily(self):

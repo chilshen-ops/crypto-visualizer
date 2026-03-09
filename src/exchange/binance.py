@@ -12,6 +12,13 @@ import pandas as pd
 import requests
 from websocket import create_connection, WebSocketApp
 
+# 尝试使用官方库
+try:
+    from binance.client import Client as BinanceClient
+    HAS_BINANCE_LIB = True
+except ImportError:
+    HAS_BINANCE_LIB = False
+
 from .base import BaseExchange
 
 
@@ -29,6 +36,30 @@ class BinanceExchange(BaseExchange):
         """
         self.api_key = api_key or os.getenv("BINANCE_API_KEY", "")
         self.api_secret = api_secret or os.getenv("BINANCE_API_SECRET", "")
+        self.testnet = testnet
+        
+        # 优先使用官方库
+        if HAS_BINANCE_LIB and self.api_key and self.api_secret:
+            try:
+                self.client = BinanceClient(self.api_key, self.api_secret)
+                self._use_lib = True
+            except:
+                self._use_lib = False
+        else:
+            self._use_lib = False
+        
+        # 设置 API 地址
+        if testnet:
+            self.base_url = "https://testnet.binance.vision/api"
+            self.ws_url = "wss://testnet.binance.vision/ws"
+        else:
+            self.base_url = "https://api.binance.com/api"
+            self.ws_url = "wss://stream.binance.com:9443/ws"
+        
+        self.ws: Optional[WebSocketApp] = None
+        self.ws_thread: Optional[threading.Thread] = None
+        self.ws_subscriptions: Dict[str, Callable] = {}
+        self._running = False
         self.testnet = testnet
         
         # 设置 API 地址
@@ -52,6 +83,8 @@ class BinanceExchange(BaseExchange):
         
         # 签名
         if signed and self.api_secret:
+            # 添加 recvWindow
+            params["recvWindow"] = 5000
             query_string = "&".join([f"{k}={v}" for k, v in sorted(params.items())])
             signature = self._sign(query_string)
             params["signature"] = signature
@@ -153,6 +186,14 @@ class BinanceExchange(BaseExchange):
         Returns:
             余额字典
         """
+        # 优先使用官方库
+        if getattr(self, '_use_lib', False):
+            account = self.client.get_account()
+            return {
+                "balances": [{"asset": b["asset"], "free": b["free"], "locked": b["locked"]} 
+                            for b in account["balances"]]
+            }
+        
         params = {"timestamp": int(time.time() * 1000)}
         return self._request("GET", "/v3/account", params, signed=True)
 
@@ -168,6 +209,10 @@ class BinanceExchange(BaseExchange):
         Returns:
             订单信息
         """
+        # 优先使用官方库
+        if getattr(self, '_use_lib', False):
+            return self.client.order_market_buy(symbol=symbol.upper(), quantity=quantity)
+        
         params = {
             "symbol": symbol.upper(),
             "side": "BUY",
@@ -228,6 +273,10 @@ class BinanceExchange(BaseExchange):
         Returns:
             订单信息
         """
+        # 优先使用官方库
+        if getattr(self, '_use_lib', False):
+            return self.client.order_market_sell(symbol=symbol.upper(), quantity=quantity)
+        
         params = {
             "symbol": symbol.upper(),
             "side": "SELL",
