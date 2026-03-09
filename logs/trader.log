@@ -1,0 +1,15 @@
+2026-03-09 12:35:08 - trader - ERROR - 同步持仓失败: Binance API Error: Mandatory parameter 'signature' was not sent, was empty/null, or malformed. (code: -1102)
+2026-03-09 12:49:31 - trader - ERROR - 同步持仓失败: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/account?timestamp=1773031751589 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000023B32369A60>, 'Connection to api.binance.com timed out. (connect timeout=10)'))
+2026-03-09 12:57:27 - trader - ERROR - 同步持仓失败: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/account?timestamp=1773032227871 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000022E1E6F8500>, 'Connection to api.binance.com timed out. (connect timeout=10)'))
+2026-03-09 12:59:39 - trader - ERROR - 同步持仓失败: Binance API Error: Mandatory parameter 'signature' was not sent, was empty/null, or malformed. (code: -1102)
+2026-03-09 13:00:59 - trader - ERROR - 同步持仓失败: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/account?timestamp=1773032439651 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000019A58E61A60>, 'Connection to api.binance.com timed out. (connect timeout=10)'))
+2026-03-09 13:05:36 - trader - ERROR - 同步持仓失败: Binance API Error: Mandatory parameter 'signature' was not sent, was empty/null, or malformed. (code: -1102)
+2026-03-09 13:12:34 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 1979.24
+2026-03-09 13:14:03 - trader - ERROR - 同步持仓失败: Binance API Error: Mandatory parameter 'signature' was not sent, was empty/null, or malformed. (code: -1102)
+2026-03-09 13:16:30 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 1981.79
+2026-03-09 13:22:00 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 1986.21
+2026-03-09 13:47:53 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 1997.37
+2026-03-09 13:49:03 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 2000.72
+2026-03-09 13:49:23 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 2001.96
+2026-03-09 13:50:42 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 2013.38
+2026-03-09 13:51:52 - trader - INFO - 同步持仓: ETHUSDT x 0.0127643 @ 2013.56

@@ -1,0 +1,22 @@
+2026-03-09 04:37:23 - ai - INFO - AI 决策: buy - MACD金叉且价格高于MA5和MA20，显示上升动能
+2026-03-09 04:49:08 - ai - INFO - AI 决策: hold - KDJ金叉与MACD柱状均显示短期买盘强度，价格虽略低于MA5但高于MA20，整体趋势偏多 (置信度0.65低于阈值)
+2026-03-09 04:49:32 - ai - INFO - AI 决策: buy - KDJ金叉与MACD柱状均为正，RSI处于中性偏上，价格接近MA5/MA20，显示短期看涨动能
+2026-03-09 04:52:04 - ai - INFO - AI 决策: hold - KDJ DEAD CROSS AND PRICE BELOW MA5 SUGGEST A SHORT‑TERM BEARISH REVERSAL DESPITE BULLISH MACD. (置信度0.60低于阈值)
+2026-03-09 12:35:23 - ai - INFO - AI 决策: hold - RSI OVERBOUGHT SUGGESTS A PULLBACK, BUT BULLISH MACD AND PRICE ABOVE SHORT‑TERM MAS INDICATE A LINGERING UPTREND. (置信度0.60低于阈值)
+2026-03-09 12:59:52 - ai - INFO - AI 决策: hold - 价格低于MA5/MA20，MACD柱状负值显示动能减弱，无明显买入信号 (置信度0.55低于阈值)
+2026-03-09 13:05:48 - ai - INFO - AI 决策: hold - 缺乏明显的买入信号，MACD柱状负值显示短期趋势偏弱，价格仍低于20日均线。 (置信度0.55低于阈值)
+2026-03-09 13:08:16 - ai - INFO - AI 决策: hold - AI 无响应
+2026-03-09 13:12:49 - ai - INFO - AI 决策: hold - 价格低于 MA5 与 MA20，MACD 柱状负值，KDJ 低于 50，RSI 仅在低位，缺乏明显买入信号 (置信度0.65低于阈值)
+2026-03-09 13:16:41 - ai - INFO - AI 决策: hold - MA金叉与正向MACD DIF暗示买入机会 (置信度0.60低于阈值)
+2026-03-09 13:19:49 - ai - INFO - AI 决策: hold - KDJ金叉显示短期买入信号，价格略高于MA5且RSI在中性区间，暗示可能出现回升。 (置信度0.60低于阈值)
+2026-03-09 13:22:08 - ai - INFO - AI 决策: hold - 价格略高于MA5/MA20，但MACD柱状负值与KDJ极高显示短期超买与弱势动能，建议观望。 (置信度0.55低于阈值)
+2026-03-09 13:25:15 - ai - INFO - AI 决策: hold - KDJ死叉与MACD柱状负值显示短期看跌信号，尽管价格略高于MA，但整体趋势偏弱。 (置信度0.60低于阈值)
+2026-03-09 13:28:22 - ai - INFO - AI 决策: hold - 价格高于 MA5 与 MA20，MACD DIF 与柱状图均为正，RSI 处于中性偏多区间，整体看涨 (置信度0.65低于阈值)
+2026-03-09 13:31:28 - ai - INFO - AI 决策: buy - PRICE ABOVE SHORT‑TERM AND LONG‑TERM MAS, MACD BULLISH, KDJ INDICATES STRONG MOMENTUM.
+2026-03-09 13:34:38 - ai - INFO - AI 决策: hold - RSI & KDJ INDICATE OVERBOUGHT CONDITIONS, BUT PRICE REMAINS ABOVE MA5/MA20 AND MACD SHOWS BULLISH MOMENTUM, CREATING UNCERTAINTY. (置信度0.55低于阈值)
+2026-03-09 13:37:45 - ai - INFO - AI 决策: hold - 价格在MA5上方，MACD显示正面动能，但RSI已处于超买区，提示短期回调风险。 (置信度0.63低于阈值)
+2026-03-09 13:40:57 - ai - INFO - AI 决策: hold - KDJ金叉显示短期买入机会，但RSI超买提示可能出现回调 (置信度0.55低于阈值)
+2026-03-09 13:44:07 - ai - INFO - AI 决策: hold - OVERBOUGHT RSI/KDJ SIGNALS POTENTIAL PULLBACK, BUT BULLISH MACD AND PRICE ABOVE MA5/MA20 SUPPORT TREND CONTINUATION. (置信度0.55低于阈值)
+2026-03-09 13:47:17 - ai - INFO - AI 决策: hold - MACD BULLISH AND PRICE ABOVE MA5/MA20, BUT RSI/KDJ OVERBOUGHT SUGGEST A SHORT‑TERM PULLBACK. (置信度0.65低于阈值)
+2026-03-09 13:50:28 - ai - INFO - AI 决策: hold - BULLISH TREND (MA5>MA20, MACD POSITIVE, KDJ GOLD CROSS) BUT RSI OVERBOUGHT SIGNALS CAUTION FOR A SHORT‑TERM PULLBACK. (置信度0.60低于阈值)
+2026-03-09 13:53:37 - ai - INFO - AI 决策: hold - 价格高于MA5/MA20显示上升趋势，但RSI、KDJ均处于超买区，存在回调风险 (置信度0.55低于阈值)

@@ -1,0 +1,24 @@
+2026-03-09 04:35:48 - main - INFO - 程序启动
+2026-03-09 04:35:48 - main - INFO - 通知器: 已启用
+2026-03-09 04:35:48 - main - WARNING - 请在 config.py 中配置 webhook token
+2026-03-09 04:35:48 - main - INFO - 初始化交易系统...
+2026-03-09 04:35:48 - main - INFO - 交易对: BTCUSDT
+2026-03-09 04:35:48 - main - INFO - K线周期: 3m
+2026-03-09 04:35:48 - main - INFO - 测试数据获取...
+2026-03-09 04:35:49 - main - INFO - BTCUSDT 当前价格: 67330.33
+2026-03-09 04:35:52 - main - INFO - 推荐的币种:
+2026-03-09 04:35:52 - main - INFO -   1. BTCUSDT (分数: 6)
+2026-03-09 04:35:52 - main - INFO -   2. ETHUSDT (分数: 6)
+2026-03-09 04:35:52 - main - INFO -   3. BNBUSDT (分数: 6)
+2026-03-09 13:14:02 - main - INFO - 程序启动
+2026-03-09 13:14:02 - main - INFO - 通知器: 已启用
+2026-03-09 13:14:02 - main - WARNING - 请在 config.py 中配置 webhook token
+2026-03-09 13:14:02 - main - INFO - 初始化交易系统...
+2026-03-09 13:14:03 - main - INFO - 交易对: ETHUSDT
+2026-03-09 13:14:03 - main - INFO - K线周期: 3m
+2026-03-09 13:14:03 - main - INFO - 测试数据获取...
+2026-03-09 13:14:04 - main - INFO - ETHUSDT 当前价格: 1980.61
+2026-03-09 13:14:07 - main - INFO - 推荐的币种:
+2026-03-09 13:14:07 - main - INFO -   1. ETHUSDT (分数: 6)
+2026-03-09 13:14:07 - main - INFO -   2. BTCUSDT (分数: 6)
+2026-03-09 13:14:07 - main - INFO -   3. BNBUSDT (分数: 6)
